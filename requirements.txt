@@ -1,0 +1,13 @@
+Django==5.1.7
+psycopg2-binary==2.9.10
+django-cors-headers
+django-environ
+djangorestframework
+djangorestframework-simplejwt
+django-gunicorn
+whitenoise
+Pillow
+openpyxl
+pandas
+pyserial
+requests

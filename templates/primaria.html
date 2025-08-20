@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Preguntas Primaria | Panel Administrador</title>
+</head>
+<body>
+    <style>
+        .login100-form-title {
+          color: "#000";
+        }
+        .label-input100 {
+          color: #000;
+        }
+        body {
+          background-color: #fff;
+        }
+      </style>
+    <div class="limiter">
+		<div class="container-login100-2">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form" method="POST" action="{% url 'primaria:upload' %}" enctype="multipart/form-data" id="form">
+					{% csrf_token %}
+					{% if messages %}
+					<ul class="messages">
+						{% for message in messages %}
+						<li class="label-input100">{{ message }}</li>
+						{% endfor %}
+					</ul>
+					{% endif %}
+          <div class="row justify-content-center mb-4">
+						<div class="col-md-12">
+							<h3 class="login100-form-title p-b-49">Subir Preguntas Primaria</h3>
+						</div>
+					</div>
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Archivo es requerido">
+						<input class="input100" type="file" name="file" placeholder="Seleccione archivo de excel">
+						<span class="focus-input100" data-symbol="&#xf266;"></span>
+					</div>
+					<div class="text-right p-t-8 p-b-31">
+					</div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" type="submit">
+								Enviar
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

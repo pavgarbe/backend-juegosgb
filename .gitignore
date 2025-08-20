@@ -1,0 +1,16 @@
+env/
+.env
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+*.log
+*.pyc
+media/
+
+# Archivos temporales del sistema
+._*
+.DS_Store
+Thumbs.db
